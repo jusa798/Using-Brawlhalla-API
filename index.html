@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" ></script>
+    <script src="charts.js" defer></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Brawlhalla Stat Tracker</title>
+</head>
+<body>
+<div class='background-container'>
+    <div class="header-container"> 
+        <div class="header-text">
+            Jusa's Brawlhalla Stat Tracker
+        </div>
+        <div class="subtitle">
+            A look into my Brawlhalla Statistics 
+        </div>
+    </div>
+    <div class="body-container">
+        <div class="elo-text-container">
+            <div class="elo-text">Current ELO: 1650</div>
+            
+        </div>
+       
+        <div class='chart-container' id="kdRatio-container">
+            <div class="useless-container-for-charts">
+                <canvas id='kdRatio' height="550" width="700"></canvas>
+            </div>
+            <div class="chart-description">
+            This graph may be a bit misleading. Seems like I am a beast with Wu Shang! Not true (He's
+            probably one of my worst legends).
+            When I pulled my data from the Brawlhalla API, I filtered the JSON with characters only 
+            above level 5, and he's only at level 6. I suppose I did well the rounds I played with him, but if 
+            I continued to play him I am sure the kill / death ratio would move closer to one or even be lower than one.
+            </div>
+        </div>
+        
+        <div class='chart-container' id="damageRatio-container">
+            <div class="useless-container-for-charts">
+                <canvas id='damageRatio' height="550" width="700"></canvas>
+            </div>
+            <div class="chart-description">
+                Ignoring the outlier, Wu Shang, this damage ratio chart shows one very interesting thing, 
+                <strong>Xull</strong>. 
+                If you look at the K/D and Win Ratio charts (0.79 and 0.39 respectively) 
+                you will see that I am a terrible Xull. However, Xull's attack power is the highest in the game,
+                which is why I do more damage than I take. Even though I die and lose more, I still do tons of damage!
+                Maybe the key to diamond is learning to play a little more defensively with Xull...
+                </div>
+        </div>
+        
+        <div class='chart-container' id="winRatio-container">
+            <div class="useless-container-for-charts">
+                <canvas id='winRatio' height="550" width="700"></canvas>
+            </div>
+            <div class="chart-description">
+                The way ELO works, most people will find themselves hovering around a certain ranking,
+                and as they gradually get better, their average rank will gradually increase. I had two massive jumps
+                in ELO. The first in Silver from 1100 to 1400 after I learned Hattori's specials (win rate of 52%). 
+                The next jump was with Teros, when I went from 1450-1650 in practically a day after I realized I liked
+                axe a lot (also a win rate of 52%). 
+            </div>
+        </div>
+       
+        <div class='chart-container' id="level-container">
+            <div class="useless-container-for-charts">
+                <canvas id='level' height="550" width="700"></canvas>
+            </div>
+            <div class="chart-description">
+                A straightforward graph. Hattori is my most played legend, but Teros is catching up. I also have the
+                black Hattori skin which makes me want to play her more. I'll also play some more Wu Shang which will definitely
+                drive down his K/D and Win ratios. 
+            </div>
+        </div>
+       
+        <div class="footer-container">
+            <div class="affiliation-textbox">
+                I am in no way affiliated with Brawlhalla.
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html> 
