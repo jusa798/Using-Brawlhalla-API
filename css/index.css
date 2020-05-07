@@ -1,0 +1,101 @@
+:root {
+    --borderColor-description-boxes: black;
+    --chart-heights: 550px;
+    --chart-width: 700px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.background-container {
+    background-color: #333;
+}
+
+/* Header Stuff */
+
+.header-container {
+    height: 125px;
+    width: 100%;
+    background: #444555;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header-text {
+    color: white;
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+}
+
+.subtitle{
+    font-size: 16px;
+    padding-top: 12px;
+    font-style: italic;
+}
+
+/* Since I'm not using Grid, just going to have a lot of container divs for flexbox, oh well */ 
+
+.body-container{
+    width: 100%;
+    display: flex;
+    height: min-content;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.elo-text-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 32px;
+
+}
+
+.elo-text{
+    border: 1px solid white;
+    padding: 20px;
+}
+
+
+/* CHART CONTAINERS */
+
+.chart-container {
+    display: flex;
+    height: var(--chart-heights) + 250px;
+    flex-direction: column;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.chart-description {
+    height: 250px;
+    max-width: 575px;
+    color: white;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 16px;
+    line-height: 185%;
+}
+
+/* FOOTER */
+
+.footer-container{ 
+    width: 100%;
+    display: flex;
+    height: 200px;
+    background-color: #444555;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+}
